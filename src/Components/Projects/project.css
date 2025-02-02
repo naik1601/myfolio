@@ -1,0 +1,206 @@
+/* General Styles */
+/* body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    color: #333;
+} */
+.project-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;  /* Center the text */
+    width: 100%;         /* Ensure it spans the full width */
+    margin-bottom: 1.5rem;
+    color: #00aeff;
+         /* Adjust color if needed */
+}
+
+/* Project Container */
+#project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* For background circles */
+    background: linear-gradient(135deg, #0b0b0b, #121213); /* Same gradient as skills */
+    background-size: 400% 400%;
+    animation: backgroundMove 8s ease infinite;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+ 
+  
+
+ 
+  
+/* Animated Background Shapes for Project */
+/* #project-container::before,
+#project-container::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+    border-radius: 50%;
+    animation: pulse 6s infinite ease-in-out;
+}
+
+#project-container::before {
+    top: -100px;
+    left: -100px;
+}
+
+#project-container::after {
+    bottom: -150px;
+    right: -150px;
+} */
+
+
+
+.project-card:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card h2 {
+    color: #3f51b5;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.project-card ul {
+    padding: 0;
+    list-style: none;
+}
+
+.project-card ul li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Background Animation */
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Keyframes for Pulse Animation (for animated circles) */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #project-container {
+        padding: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+  
+  .project-card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .project-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #00aeff;
+  }
+  
+  p {
+    color: #bbb;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .github-button {
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .github-button:hover {
+    background-color: #444;
+  }
+  
+  .github-logo {
+    width: 20px;
+    height: 20px;
+  }
+  

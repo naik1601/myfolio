@@ -1,0 +1,250 @@
+/* Root Section Styling */
+/* #skills {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #0b0b0b, #121213);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  
+  
+} */
+ #skills{
+  overflow: hidden;
+  width: 100vw;
+  max-width: 65rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #0b0b0b, #121213);
+ }
+
+/* Animated Background Shapes */
+/* #skills::before,
+#skills::after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  border-radius: 50%;
+  animation: pulse 6s infinite ease-in-out;
+}
+
+#skills::before {
+  top: -150px;
+  left: -150px;
+}
+
+#skills::after {
+  bottom: -200px;
+  right: -200px;
+} */
+
+/* Section Titles */
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  z-index:1;
+  color: #00aeff;
+}
+
+.sectionDesc {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #aaa;
+}
+
+/* Tabs Section */
+.skillsTabs {
+  margin: 2rem 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  margin: 0 1rem;
+  font-size: 1rem;
+  background: #1c1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tabButton.active {
+  background: #00aeff;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.tabButton:hover {
+  background: #005bb5;
+}
+
+/* Skills Grid */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.skillCard {
+  padding: 1.5rem;
+  background: #1c1c1c;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.skillIcon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.skillName {
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Timeline Section */
+.timeline {
+  margin-top: 3rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  background: #00aeff;
+  border-radius: 50%;
+  position: absolute;
+  left: -6px;
+  top: 6px;
+}
+
+.timelineContent {
+  margin-left: 2.5rem;
+}
+
+.timelineTitle {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.timelineDuration {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.timelineDescription {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  .sectionDesc {
+    font-size: 1rem;
+  }
+}
+/* Work Experience Section */
+.workExperience {
+  margin-top: 3rem;
+  width: 100%; /* Set full width for centering */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+}
+
+.workCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 80%; /* Adjusted width for centering */
+  justify-content: center; /* Center grid items */
+}
+
+.workCard {
+  background: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.workCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.workTitle {
+  font-size: 1.5rem;
+  color: #00aeff;
+  margin-bottom: 0.5rem;
+}
+
+.workDuration {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.workDescription {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}

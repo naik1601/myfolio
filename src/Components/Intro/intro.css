@@ -1,0 +1,283 @@
+/* Root Section Styling */
+#intro {
+    height: 100vh;
+    width: 100vw;
+    /* max-width: 75rem; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0b0b0b, #121213); /* Gradient background */
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  /* Animated Background Shapes */
+  /* #intro::before,
+  #intro::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+    border-radius: 50%;
+    animation: pulse 6s infinite ease-in-out;
+  }
+  
+  #intro::before {
+    top: -100px;
+    left: -100px;
+  }
+  
+  #intro::after {
+    bottom: -150px;
+    right: -150px;
+  } */
+  
+  /* Profile Image Styling */
+  .profile-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .bg {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    animation: float 4s ease-in-out infinite;
+    background: white;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  
+  /* Intro Text Styling */
+  .introcontent {
+    max-width: 40rem;
+    text-align: left;
+    animation: fadeIn 1.5s ease;
+  }
+  .hello {
+    font-size: 2rem;
+    font-weight: 100;
+    animation: slideInLeft 1s ease;
+  }
+  .introname {
+    color: #00aeff;
+  }
+  .introText {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .intropara {
+    font-size: 1.1rem;
+    font-weight: 100;
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Button Styling */
+  .btn {
+    background: #00aeff;
+    color: #333;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(255, 223, 0, 0.5);
+  }
+  .btnimg {
+    object-fit: cover;
+    margin-right: 0.5rem;
+    height: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .desktopintromenubtn{
+    background: #00aeff;
+    color: #333;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .desktopintromenubtn
+    :hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(255, 223, 0, 0.4);
+  }
+  
+  .desktopmenuimg {
+    height: 1rem;
+    width: 1rem;
+    object-fit: cover;
+  }
+  
+  /* Responsive Styling */
+  @media screen and (max-width: 740px) {
+    #intro {
+      flex-direction: column-reverse;
+      align-items: center; /* Ensures everything is centered */
+      justify-content: center; /* Removes the excessive space */
+      padding: 1rem 0;
+      gap: 1rem; /* Ensures a minimal gap */
+    }
+    .introcontent {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .profile-container {
+      margin-bottom: 1rem; /* Reduce unnecessary spacing */
+    }
+    
+    .bg {
+      width: 12rem;
+      height: 12rem;
+    }
+    .desktopintromenubtn{
+      display: inline;;
+    }
+  }
+  
+  
+  @media screen and (max-width: 480px) {
+    .introText {
+      font-size: 1.5rem;
+    }
+    .hello {
+      font-size: 1.5rem;
+    }
+    .bg {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+  
+  /* Animations */
+@keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-15deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Animation Classes */
+  .animate-slideInLeft {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 1.5s ease-out;
+  }
+  
+  .animate-slideUp {
+    animation: slideUp 1.2s ease-out;
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave 2s infinite ease-in-out;
+  }
+  
+  
