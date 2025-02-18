@@ -44,7 +44,7 @@
 } */
 
 /* Section Titles */
-.sectionTitle {
+/* .sectionTitle {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -57,10 +57,42 @@
   text-align: center;
   margin-bottom: 3rem;
   color: #aaa;
+} */
+ /* Section Title Styling */
+ .sectionTitle {
+  font-size: 2.5rem; /* Increased font size for a bolder title */
+  font-weight: 700; /* Makes the title bold */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  z-index: 1;
+  color: #00aeff;
+  text-transform: uppercase; /* Makes the title in uppercase for a clean look */
+  letter-spacing: 2px; /* Adds some space between letters for emphasis */
+  text-shadow: 0 0 8px #00aeff, 0 0 15px #00aeff, 0 0 25px #00aeff; /* Permanent neon glow */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
 }
 
+/* Section Description Styling */
+.sectionDesc {
+  font-size: 1.2rem; /* Slightly increased size for better readability */
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #aaa;
+  line-height: 1.6; /* Increased line height for better readability */
+  font-weight: 400; /* A bit lighter than the title for contrast */
+  max-width: 800px; /* Limit the width to make the text more readable */
+  margin-left: auto;
+  margin-right: auto; /* Centers the description */
+}
+
+.sectionDesc:hover {
+  color: #ffffff; /* Change color on hover */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+
 /* Tabs Section */
-.skillsTabs {
+/* .skillsTabs {
   margin: 2rem 0;
 }
 
@@ -90,10 +122,57 @@
 
 .tabButton:hover {
   background: #005bb5;
+} */
+/* Skills Tabs Container */
+.skillsTabs {
+  margin: 3rem 0; /* Increased margin for more space around the tab section */
+  text-align: center; /* Centering the content */
+}
+
+/* Tab Container Styling */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem; /* Increased margin for better spacing */
+}
+
+/* Individual Tab Button Styling */
+.tabButton {
+  padding: 0.75rem 1.5rem;
+  margin: 0 1rem;
+  font-size: 1.1rem; /* Increased font size for better readability */
+  background: #1c1c1c;
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Increased border radius for a more rounded look */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  position: relative; /* To allow for shadow styling */
+}
+
+/* Active Tab Button Styling */
+.tabButton.active {
+  background: #00aeff;
+  color: #fff;
+  transform: scale(1.1); /* Slight zoom effect for the active tab */
+  box-shadow: 0 0 8px #00aeff, 0 0 20px #00aeff; /* Glow effect for active tab */
+}
+
+/* Hover Effect for Tab Buttons */
+.tabButton:hover {
+  background: #005bb5;
+  transform: scale(1.05); /* Slight scale-up effect on hover */
+  box-shadow: 0 0 8px #005bb5, 0 0 15px #005bb5; /* Glowing effect on hover */
+}
+
+/* Optional Styling for Focused Tab (optional) */
+.tabButton:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 8px #00aeff, 0 0 12px #00aeff; /* Glowing focus effect */
 }
 
 /* Skills Grid */
-.skillsGrid {
+/* .skillsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
@@ -122,53 +201,67 @@
 .skillName {
   font-size: 1.1rem;
   color: #fff;
+} */
+ /* Skills Grid Layout */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Increased the min size for better spacing */
+  gap: 2rem;
+  text-align: center;
+  margin-top: 3rem; /* Added margin for spacing */
 }
 
-/* Timeline Section */
-.timeline {
-  margin-top: 3rem;
+/* Skills Grid Layout */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Increased the min size for better spacing */
+  gap: 2rem;
+  text-align: center;
+  margin-top: 3rem; /* Added margin for spacing */
+}
+
+/* Individual Skill Card Styling */
+.skillCard {
+  padding: 2rem; /* Increased padding for better content spacing */
+  background: #1c1c1c;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
   position: relative;
-  padding-left: 2rem;
-}
-
-.timelineItem {
+  overflow: hidden; /* To handle the content during hover */
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 2rem;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #00aeff; /* Permanent neon border */
+  background-clip: padding-box; /* Ensures background doesn't cover the border */
 }
 
-.timelineDot {
-  width: 12px;
-  height: 12px;
-  background: #00aeff;
-  border-radius: 50%;
-  position: absolute;
-  left: -6px;
-  top: 6px;
+/* Skill Icon Styling */
+.skillIcon {
+  width: 80px; /* Increased icon size */
+  height: 80px; /* Increased icon size */
+  margin-bottom: 1.5rem; /* Increased spacing between icon and text */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.timelineContent {
-  margin-left: 2.5rem;
-}
-
-.timelineTitle {
-  font-size: 1.5rem;
+/* Skill Name Styling */
+.skillName {
+  font-size: 1.2rem; /* Increased font size for better readability */
+  font-weight: 600; /* Added more boldness to the text */
   color: #fff;
-  margin-bottom: 0.5rem;
+  transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.timelineDuration {
-  font-size: 1rem;
-  color: #bbb;
-  margin-bottom: 1rem;
+/* You can still keep the hover effects for other elements (icon and name) if desired */
+.skillCard:hover .skillIcon {
+  transform: scale(1.1); /* Slightly enlarges the icon on hover */
 }
 
-.timelineDescription {
-  font-size: 1rem;
-  color: #ddd;
-  line-height: 1.5;
+.skillCard:hover .skillName {
+  color: #00aeff; /* Change text color to neon blue on hover */
 }
+
 
 /* Animations */
 @keyframes pulse {
@@ -199,36 +292,56 @@
   }
 }
 /* Work Experience Section */
+/* Work Experience Section */
 .workExperience {
   margin-top: 3rem;
-  width: 100%; /* Set full width for centering */
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
   text-align: center;
 }
 
+/* Work Cards Grid */
 .workCards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   width: 80%; /* Adjusted width for centering */
-  justify-content: center; /* Center grid items */
+  justify-content: center;
+  opacity: 1; /* Make sure it's fully visible */
+  animation: slideIn 0.8s ease-out forwards; /* Animation for entry */
 }
 
+/* Individual Work Card Styling */
 .workCard {
   background: #1c1c1c;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
+  border: 2px solid #00aeff; /* Permanent neon border */
+  background-clip: padding-box; /* Ensures the background doesn't cover the border */
+  transition: box-shadow 0.3s ease; /* Keep transition for box-shadow but no hover border change */
 }
+
 
 .workCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); /* Starts from the left */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Ends at normal position */
+  }
 }
 
 .workTitle {

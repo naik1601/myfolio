@@ -21,7 +21,7 @@ const Intro = () => {
 
 <a href="/Shreyesh_Naik_Resume.pdf" download="Shreyesh_Naik_Resume.pdf">
       <button className="desktopintromenubtn">
-        <img src={downloadimg} alt="download" className="desktopmenuimg" />
+        {/* <img src={downloadimg} alt="download" className="desktopmenuimg" /> */}
         Resume
       </button>
       </a>

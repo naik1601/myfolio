@@ -12,9 +12,9 @@
     text-align: center;  /* Center the text */
     width: 100%;         /* Ensure it spans the full width */
     margin-bottom: 1.5rem;
-    color: #00aeff;
-         /* Adjust color if needed */
-}
+    color: #00aeff;      /* Neon blue color */
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff, 0 0 40px #00aeff; /* Neon glow effect */
+  }
 
 /* Project Container */
 #project-container {
@@ -146,7 +146,7 @@
     }
 }
   
-  .project-card {
+.project-card {
     background-color: #1c1c1c;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -154,13 +154,16 @@
     text-align: center;
     padding: 1.5rem;
     width: 300px;
+    border: 2px solid #00aeff; /* Neon blue border */
+    background-clip: padding-box; /* Ensures the background doesn't cover the border */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+    
   .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   }
+  
   
   .project-image {
     width: 100%;
@@ -192,15 +195,13 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .github-button:hover {
-    background-color: #444;
+    text-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff, 0 0 15px #00aeff; /* Permanent neon text effect */
+    box-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff; /* Permanent neon glow */
   }
   
   .github-logo {
     width: 20px;
     height: 20px;
   }
+  
   

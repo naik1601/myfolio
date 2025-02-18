@@ -34,7 +34,7 @@ const Navbar = () => {
       {/* Contact Me Button */}
       <a href="/Shreyesh_Naik_Resume.pdf" download="Shreyesh_Naik_Resume.pdf">
       <button className="desktopmenubtn">
-        <img src={downloadimg} alt="download" className="desktopmenuimg" />
+       
         Resume
       </button>
       </a>

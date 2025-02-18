@@ -24,6 +24,9 @@
     height: 3.5rem;
     width: 3.5rem;
     animation: fadeInOut 4s infinite ease-in-out;
+    background-color: #fff; /* Adjust this if needed */
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
   }
   
   .logo-text {
@@ -55,7 +58,25 @@
   }
   
   /* Underline Animation for Hover */
-  .desktopMenuListItem::after {
+  .desktopMenuListItem {
+    color: #fff; /* Default color */
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    text-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff; /* Neon glow effect by default */
+    transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Neon Glow Effect on Hover */
+.desktopMenuListItem:hover {
+    color: #00aeff;
+    text-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff, 0 0 20px #00aeff; /* Neon glow effect */
+}
+
+/* Underline Animation with Neon Glow */
+.desktopMenuListItem::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -63,31 +84,14 @@
     width: 0;
     height: 2px;
     background-color: #00aeff;
-    transition: width 0.3s ease;
-  }
-  
-  .desktopMenuListItem:hover::after {
+    transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.desktopMenuListItem:hover::after {
     width: 100%;
-  }
-  
-  /* Button Styling */
-  .desktopmenubtn {
-    background: #00aeff;
-    color: #333;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .desktopmenubtn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(255, 223, 0, 0.4);
-  }
+    box-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff; /* Neon glow effect on underline */
+}
+
   
   .desktopmenuimg {
     height: 1rem;
@@ -113,7 +117,26 @@
       opacity: 1;
     }
   }
-  
+  .desktopmenubtn {
+    background: #111; /* Dark background to make the neon glow stand out */
+    color: #00aeff;  /* Neon text color */
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: 2px solid #00aeff; /* Neon border */
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 5px #00aeff, 0 0 10px #00aeff, 0 0 20px #00aeff; /* Glow effect for text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+}
+
+.desktopmenubtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00aeff, 0 0 30px #00aeff, 0 0 60px #00aeff; /* Glowing effect around the button */
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff; /* Enhanced glow on hover */
+}
+ 
   /* Responsive Design */
   @media screen and (max-width: 768px) {
     .desktopMenu {
